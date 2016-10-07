@@ -11,7 +11,12 @@ report.pdf: report/report.Rmd data/regression.RData images/scatterplot-tv-sales.
 eda-output.txt: code/eda-script.R data/Advertising.csv
 	Rscript code/eda-script.R
 	mv eda-output.txt data
+	rm Rplots.pdf
 	
+regression.RData: code/regression-script.R data/Advertising.csv
+	Rscript code/regression-script.R
+	rm Rplots.pdf
+
 clean:
 	rm -f report/report.Rmd
 	rm -f report/report.pdf
