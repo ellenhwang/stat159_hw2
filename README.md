@@ -5,6 +5,7 @@
 **Project Description and Structure**: This assignment's purpose is to practice multiple regression functions in R. Makefile to compiles code, graphs, and report. This assignment is divided into code, data, images, and report.
 
 **Steps**:
+
 1. git clone the repository
 2. `cd` into directory
 3. run `make all`
