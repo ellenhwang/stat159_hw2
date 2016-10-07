@@ -26,11 +26,6 @@ hist_sales <- ggplot(advertising, aes(x = Sales)) + geom_histogram(aes(y = ..den
 hist_tv <- ggplot(advertising, aes(x = TV)) + geom_histogram(aes(y = ..density.., fill = ..density..), binwidth = 10) +
                   geom_density() + scale_fill_gradient("Density", low = '#006400', high = 'palegreen') + ggtitle("Histogram of TV") 
 
-# scatter plot of tv and sales
-scatter_tv_sales <- ggplot(advertising, aes(x = TV, y = Sales)) + geom_point(alpha = 0.6) + geom_smooth(method = 'lm') +
-  ggtitle("Scatter Plot: TV vs Sales")
-scatter_tv_sales
-
 # Export Visualizations
 png('images/histogram-tv.png')
 hist_tv
