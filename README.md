@@ -4,11 +4,15 @@
 
 **Project Description and Structure**: This assignment's purpose is to practice multiple regression functions in R. Makefile to compiles code, graphs, and report. This assignment is divided into code, data, images, and report.
 
-**Steps**:
+**Steps in Terminal**:
 
-1. git clone the repository
+1. `git clone` the repository
 2. `cd` into directory
 3. run `make all`
+
+**References**
+
+[*An Introduction to Statistical Learning**](http://www-bcf.usc.edu/~gareth/ISL/book.html) by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
 
 
 
