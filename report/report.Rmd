@@ -40,7 +40,7 @@ sum_simp_reg
 
 **Scatter Plot with Regression of Sales on TV**
 
-![](../images/scatter-tv-sales.png)
+![](images/scatter-tv-sales.png)
 
 \newpage
 
