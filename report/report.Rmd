@@ -1,0 +1,48 @@
+---
+title: "Stat 159 Hw3 Report"
+author: "Ellen Hwang"
+date: "10/7/2016"
+output: pdf_document
+---
+
+# Abstract
+In this report, I am performing a simple linear regression analysis. I am using the [Advertising dataset](http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv), taken from 
+the webpage for the text, *An Introduction to Statistical Learning*, to perform this simple linear regression. This report will include a description of the data, methodology, and results for the linear regression. 
+
+
+# Introduction
+One of the basic models data scientists should understand is simple linear regression. Regression, in its most simple terms, is a statistical process that estimates the relationship between a dependent variable and one or more independent variables. In this report, we will only be examing the relationship between one dependent variable and one independent variable to understand regression. This report will specifically examine the relationship between TV advertising budget and number of sales using linear regression.
+
+# Data 
+We will be working with the [Advertising dataset](http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv). This dataset holds information for 200 different markes for 4 different variables: *Sales*, *TV*, *Newspaper*, and *Radio*. *Sales* represents the amount of units sold (in thousands). *TV*, *Newspaper*, and *Radio* each represent the advertising budget spent on those platforms. 
+
+# Methodology 
+For running a regression, we using the `lm()` function. More specially, we regress *Sales* on *TV* using this code: `lm(Sales ~ TV, data = advertising)`. The immediate output of this code is the estimated coefficient and the constant value. Second, I use the `summary`function on the regression object to see further coefficient information, residuals, and other statistics.  
+
+\newpage
+
+# Results
+Based on the regression of Sales on TV, we found that TV is a statistically significant variable because of a p-value far below zero. The R squared value is at .6099 meaning about 61% of the variance from the population regression line is explained by TV. We can also see that the coefficient on TV is a postive value, meaning TV and Sales are positively correlated.
+
+**Regression Object Output**
+```{r}
+load('../data/regression.RData')
+simp_reg
+```
+
+
+**Summary on Regression Object**
+```{r}
+sum_simp_reg
+```
+
+\newpage 
+
+**Scatter Plot with Regression of Sales on TV**
+
+![](../images/scatter-tv-sales.png)
+
+\newpage
+
+# Conclusions
+Ultimately, we can see there is a relationship between Sales and TV. We see that the regression output gives us several summary statistics to understand the relationship between Sales and TV. For instance, the high F-statistic and low p-value tell us that TV is a significant explanatory variable to Sales. The positive coefficient on TV tells us that TV and Sales are positively correlated. Although the statistics tell us a good story, a visualization of the relationship through a scatter plot can help us better comprehend what is going on. Overall, this regression analysis has shown us several strategies for using regression analysis to understand the data we have at hand. 
