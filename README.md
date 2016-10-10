@@ -1,4 +1,4 @@
-# HW03: Multiple Regression Analysis
+# HW02: Simple Linear Regression Analysis
 
 **Author**: Ellen Hwang
 
